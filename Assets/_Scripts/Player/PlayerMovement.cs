@@ -11,10 +11,11 @@ public class PlayerMovement : MonoBehaviour
     public float player_Speed = 8f;
     public float player_RunningSpeed = 15f;
     public float player_Stamina = 20f;
+    public float player_CurrentStamina = 20f;
     public float player_RunningEnergy = 2f;
     public float player_ShortDash;
     [Space]
-    public Slider player_StaminaBar;
+    public Image player_StaminaBar;
     [Space]
     public float jumpHeight;
 
@@ -53,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        //Stamina Bar
+        player_StaminaBar.fillAmount = player_CurrentStamina / player_Stamina;
 
         //Running
         if ((Input.GetButton("Run") || Input.GetKey(KeyCode.LeftShift) && player_Stamina <= 20f) && (xAxis + zAxis != 0))
@@ -71,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
             player_Speed = player_RunningSpeed;
             player_ShortDash -= 1 * Time.deltaTime; //Timer for short dash
 
-            player_Stamina -= player_RunningEnergy * Time.deltaTime;
+            player_CurrentStamina -= player_RunningEnergy * Time.deltaTime;
 
             if(player_ShortDash < 0)
                 isDashing = false;
@@ -83,18 +86,18 @@ public class PlayerMovement : MonoBehaviour
         {
             player_Speed = 8f; //Set Player speed back to normal
             player_ShortDash = 3f; //Reset Dash time
-            player_Stamina += 1 * Time.deltaTime; //Recharge stamina bar
+            player_CurrentStamina += 1 * Time.deltaTime; //Recharge stamina bar
 
-            if(player_Stamina > 20f)
+            if(player_CurrentStamina > 20f)
             {
-                player_Stamina = 20f;
+                player_CurrentStamina = 20f;
             }
         }
 
         //Stamina reaches 0
-        if (player_Stamina <= 0)
+        if (player_CurrentStamina <= 0)
         {
-            player_Stamina = 0f;
+            player_CurrentStamina = 0f;
             player_Speed = 8f;
             isDashing = false;
 
@@ -104,8 +107,6 @@ public class PlayerMovement : MonoBehaviour
         //Walking
         transform.Translate(playerMovement * player_Speed * Time.deltaTime, Space.World);
 
-        //Stamina Bar
-        player_StaminaBar.value = player_Stamina;
         #endregion
 
         #region Jumping and altering the mass

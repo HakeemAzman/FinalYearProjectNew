@@ -27,11 +27,11 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "ArmAttack")
-        {
-            enemy_Health -= 25;
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.tag == "ArmAttack")
+    //    {
+    //        enemy_Health -= 25;
+    //    }
+    //}
 }

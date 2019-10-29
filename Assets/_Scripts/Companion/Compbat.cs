@@ -5,6 +5,9 @@ using UnityEngine.AI;
 public class Compbat : MonoBehaviour
 {
     public GameObject VFXPrefab;
+    public GameObject aoeAttack;
+    public float radius;
+    public float kbForce = 300;
     public CompanionScript cs;
     public CompanionHealth ch;
     public Animator anim;
@@ -51,6 +54,7 @@ public class Compbat : MonoBehaviour
         }
     }
 
+
     private void OnTriggerExit(Collider other)
     {
         if(other.gameObject.tag == "Enemy")
@@ -61,4 +65,6 @@ public class Compbat : MonoBehaviour
             anim.gameObject.GetComponent<Animator>().SetBool("enemyF", false);
         }
     }
+
+    
 }

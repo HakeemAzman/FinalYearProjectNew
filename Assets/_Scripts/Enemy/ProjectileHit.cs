@@ -40,7 +40,7 @@ public class ProjectileHit : MonoBehaviour
         }
         else if (other.transform == targetPlayer) //does damage to the player
         {
-            playerHealth.player_Health -= damageOutput;
+            playerHealth.playerCurrentHealth -= damageOutput;
             Instantiate(explosionParticle, transform.position, transform.rotation);
             gameObject.SetActive(false);
         }

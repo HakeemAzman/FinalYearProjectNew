@@ -9,6 +9,8 @@ TagManager:
   - ArmAttack
   - Interest
   - Terrain
+  - DistractionItem
+  - Projectile
   layers:
   - Default
   - TransparentFX

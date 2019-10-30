@@ -38,7 +38,7 @@ public class EnemyShooterMover : MonoBehaviour
 
     private void Update()
     {
-        if (playerHealth.player_Health == 0) return;
+        if (playerHealth.playerCurrentHealth == 0) return;
 
         if (targetCompanion != null && InChasingRangeCompanion())
         {
@@ -90,7 +90,7 @@ public class EnemyShooterMover : MonoBehaviour
         //the distance between the player and the enemy.
         float distanceFromPlayer = Vector3.Distance(targetPlayer.position, transform.position);
 
-        agent.SetDestination(targetPlayer.position);
+        //agent.SetDestination(targetPlayer.position);
 
         //if the desired distance between the enemy and player is met
         //or when the player is in enemy's attack range, enemy will rotate to face the player.
@@ -108,7 +108,7 @@ public class EnemyShooterMover : MonoBehaviour
         //the distance between the bot and the enemy.
         float distanceFromCompanion = Vector3.Distance(targetCompanion.position, transform.position);
 
-        agent.SetDestination(targetCompanion.position);
+        //agent.SetDestination(targetCompanion.position);
 
         //if the desired distance between the enemy and bot is met
         //or when the bot is in enemy's attack range, enemy will rotate to face the bot.

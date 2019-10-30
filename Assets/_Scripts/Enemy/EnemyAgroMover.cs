@@ -19,8 +19,7 @@ namespace Game.Control
 
         #region Enemy Combat System, Enemy Idle Behaviour
         EnemyAgroCombat Combat;
-
-        Vector3 guardPosition;
+        
         float timeSinceLastSawPlayer = Mathf.Infinity;
         #endregion
 
@@ -37,19 +36,19 @@ namespace Game.Control
             agent = GetComponent<NavMeshAgent>();
 
             playerHealth = targetPlayer.GetComponent<PlayerHealth>();
-            guardPosition = transform.position;
         }
 
         private void Update()
         {
-            if (playerHealth.player_Health == 0) return;
+            if (playerHealth.playerCurrentHealth == 0) return;
 
             if (targetCompanion != null && InChasingRangeCompanion())
             {
                 timeSinceLastSawPlayer = 0;
-                ChaseCompanion();
+                Combat.AttackCompanion();
+                //ChaseCompanion();
             }
-            else
+            if (InLineOfSightPlayer() && InChasingRangePlayer())
             {
                 timeSinceLastSawPlayer = 0;
                 ChasePlayer();
@@ -107,21 +106,21 @@ namespace Game.Control
             }
         }
 
-        private void ChaseCompanion()
-        {
-            //the distance between the bot and the enemy.
-            float distanceFromCompanion = Vector3.Distance(targetCompanion.position, transform.position);
+        //private void ChaseCompanion()
+        //{
+        //    //the distance between the bot and the enemy.
+        //    float distanceFromCompanion = Vector3.Distance(targetCompanion.position, transform.position);
 
-            agent.SetDestination(targetCompanion.position);
+        //    agent.SetDestination(targetCompanion.position);
 
-            //if the desired distance between the enemy and bot is met
-            //or when the bot is in enemy's attack range, enemy will rotate to face the bot.
-            if (distanceFromCompanion <= agent.stoppingDistance)
-            {
-                FaceTarget(targetCompanion);
-                Combat.AttackCompanion();
-            }
-        }
+        //    //if the desired distance between the enemy and bot is met
+        //    //or when the bot is in enemy's attack range, enemy will rotate to face the bot.
+        //    if (distanceFromCompanion <= agent.stoppingDistance)
+        //    {
+        //        FaceTarget(targetCompanion);
+        //        Combat.AttackCompanion();
+        //    }
+        //}
 
         void FaceTarget(Transform target)
         {

@@ -618,8 +618,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.014536, y: 1, z: 1.6900196}
-  m_Center: {x: 0.010756016, y: 0, z: -0.08373785}
+  m_Size: {x: 3.014536, y: 5.020267, z: 1.6900196}
+  m_Center: {x: 0.010756016, y: 2.0101335, z: -0.08373785}
 --- !u!195 &5013666857775057505
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -661,6 +661,7 @@ MonoBehaviour:
   canSlam: 0
   isPlayer: 0
   haveEnemy: 0
+  isWandering: 0
 --- !u!114 &5013666857775057308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,6 +675,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VFXPrefab: {fileID: 0}
+  aoeAttack: {fileID: 0}
+  radius: 0
+  kbForce: 300
   cs: {fileID: 5013666857775057311}
   ch: {fileID: 1228161214}
   anim: {fileID: 4955745109251439030}
@@ -696,7 +700,9 @@ MonoBehaviour:
   cs: {fileID: 5013666857775057311}
   compS: {fileID: 5013666857775057308}
   anim: {fileID: 4955745109251439030}
-  isDisabled: 0
+  enduranceBar: {fileID: 0}
+  leftArm: {fileID: 0}
+  rightArm: {fileID: 0}
 --- !u!1 &5013666858851917954
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,7 +45,7 @@ namespace Game.Control
 
         private void Update()
         {
-            if (playerHealth.player_Health == 0) return;
+            if (playerHealth.playerCurrentHealth == 0) return;
 
             if (targetCompanion != null && InAttackingRangeCompanion())
             {

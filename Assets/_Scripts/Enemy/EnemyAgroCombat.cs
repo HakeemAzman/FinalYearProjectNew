@@ -42,7 +42,7 @@ public class EnemyAgroCombat : MonoBehaviour
         {
             timeSinceLastAttack = 0;
 
-            playerHealth.player_Health -= damageOutput;
+            playerHealth.playerCurrentHealth -= damageOutput;
 
             GetComponent<Animator>().SetTrigger("attack");
         }

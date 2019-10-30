@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class EnemyHealth : MonoBehaviour
 {
     public int enemy_Health;
     public GameObject deathParticle;
     public Compbat combatS;
     public CompanionScript cs;
-
-
+    public NavMeshAgent navAgent;
+    Vector3 direction;
     public void Start()
     {
         cs = GameObject.FindWithTag("Companion").GetComponent<CompanionScript>();
@@ -27,11 +27,12 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.tag == "ArmAttack")
-    //    {
-    //        enemy_Health -= 25;
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "ArmAttack")
+        {
+            //navAgent.velocity = direction * 8;
+            enemy_Health -= 150;
+        }
+    }
 }

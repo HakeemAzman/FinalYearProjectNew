@@ -11,7 +11,7 @@ public class CompanionHealth : MonoBehaviour
     public Slider enduranceBar;
     public BoxCollider leftArm;
     public BoxCollider rightArm;
-    public GameObject shieldSphere;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,6 @@ public class CompanionHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         enduranceBar.value = companionHealth;
         if (companionHealth <= 0)
         {

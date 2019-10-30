@@ -65,7 +65,7 @@ public class EnemyAgroCombat : MonoBehaviour
         float angle = Vector3.Angle(directionToTarget, transform.forward);
 
         //Damage to player
-        if (Mathf.Abs(angle) < 60 && timeSinceLastAttack > timeBetweenAttacks)
+        if (Mathf.Abs(angle) < 40 && timeSinceLastAttack > timeBetweenAttacks)
         {
             timeSinceLastAttack = 0;
 

@@ -38,8 +38,8 @@ public class AoeAttack : MonoBehaviour
             if (rb != null)
             {
                 rb.AddExplosionForce(kbForce, transform.position, radius);
-                eH = GameObject.FindWithTag("Enemy").GetComponent<EnemyHealth>();
-                eH.enemy_Health -= 50;
+                //eH = GameObject.FindWithTag("Enemy").GetComponent<EnemyHealth>();
+                //eH.enemy_Health -= 50;
             }
         }
     }

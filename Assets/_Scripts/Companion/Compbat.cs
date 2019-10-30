@@ -5,9 +5,6 @@ using UnityEngine.AI;
 public class Compbat : MonoBehaviour
 {
     public GameObject VFXPrefab;
-    public GameObject aoeAttack;
-    public float radius;
-    public float kbForce = 300;
     public CompanionScript cs;
     public CompanionHealth ch;
     public Animator anim;

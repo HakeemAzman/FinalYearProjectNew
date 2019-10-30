@@ -6,11 +6,11 @@ public class AoeAttack : MonoBehaviour
 {
     public float radius;
     public float kbForce;
-    
+    public EnemyHealth eH;
     // Start is called before the first frame update
     void Start()
     {
-        
+        eH = GameObject.FindWithTag("Enemy").GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -19,9 +19,9 @@ public class AoeAttack : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "Terrain")
+        if (collision.gameObject.tag == "Terrain")
         {
             print("Hi");
             areaofEffect();
@@ -38,7 +38,8 @@ public class AoeAttack : MonoBehaviour
             if (rb != null)
             {
                 rb.AddExplosionForce(kbForce, transform.position, radius);
-
+                eH = GameObject.FindWithTag("Enemy").GetComponent<EnemyHealth>();
+                eH.enemy_Health -= 50;
             }
         }
     }

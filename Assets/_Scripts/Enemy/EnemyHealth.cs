@@ -31,8 +31,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (other.gameObject.tag == "ArmAttack")
         {
-            //navAgent.velocity = direction * 8;
-            enemy_Health -= 150;
+            //enemy_Health -= 1000;
         }
     }
 }

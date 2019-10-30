@@ -10,6 +10,7 @@ public class Compbat : MonoBehaviour
     public Animator anim;
     public TrailRenderer attackVFX;
     public TrailRenderer attackVFX2;
+    public GameObject AoECollider;
     public bool isEnemy;
     // Start is called before the first frame update
 
@@ -23,7 +24,7 @@ public class Compbat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isEnemy)
+        if (!isEnemy)
         {
             anim.SetBool("enemyF", false);
             attackVFX.gameObject.GetComponent<TrailRenderer>().enabled = false;
@@ -31,7 +32,7 @@ public class Compbat : MonoBehaviour
             anim.gameObject.GetComponent<Animator>().SetFloat("walk", 5);
         }
 
-        if(!cs.haveEnemy)
+        if (!cs.haveEnemy)
         {
             anim.gameObject.GetComponent<Animator>().SetBool("enemyF", false);
         }
@@ -39,7 +40,7 @@ public class Compbat : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
             isEnemy = true;
             cs.speedFloat = 0;
@@ -54,7 +55,7 @@ public class Compbat : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
             isEnemy = false;
             cs.speedFloat = 5;
@@ -63,5 +64,5 @@ public class Compbat : MonoBehaviour
         }
     }
 
-    
+
 }

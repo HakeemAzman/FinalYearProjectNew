@@ -10,7 +10,7 @@ public class CompanionHealth : MonoBehaviour
     public Animator anim;
     public Slider enduranceBar;
     public BoxCollider leftArm;
-    public BoxCollider rightArm;
+    public BoxCollider rightArm; 
     public GameObject shieldSphere;
     // Start is called before the first frame update
     void Start()

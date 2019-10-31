@@ -13,5 +13,15 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         playerHealthImage.fillAmount = (float)playerCurrentHealth / (float)player_Health;
+        Death();
+    }
+
+    void Death()
+    {
+        if(playerCurrentHealth == 0)
+        {
+            transform.position = GameManager.Instance.lastCheckpoint.position;
+            playerCurrentHealth = player_Health;
+        }
     }
 }

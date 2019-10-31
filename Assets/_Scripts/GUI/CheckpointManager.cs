@@ -17,12 +17,13 @@ public class CheckpointManager : MonoBehaviour
         m_targetPlayer = PlayerManager.instance.player.transform;
         m_playerHealth = m_targetPlayer.GetComponent<PlayerHealth>().player_Health;
     }
-    
-    void Update()
+
+    private void OnTriggerEnter(Collider other)
     {
-        if(m_playerHealth == 0)
+        if(other.transform == m_targetPlayer)
         {
-            //restart
+            print("Player col");
+            GameManager.Instance.lastCheckpoint = transform;
         }
     }
 }

@@ -22,6 +22,7 @@ public class CompanionHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         
         enduranceBar.value = companionHealth;
         if (companionHealth <= 0)

@@ -52,17 +52,17 @@ public class Companion_Commands : MonoBehaviour
             cs.speedFloat = 5;
         }
 
-        if (startCount) //Countdown to start
-        {
-            timer -= timededuct * Time.deltaTime;
-        }
-        if (timer <= 0 && !cs.haveEnemy) //When it reaches O it stays at 0 and the Companion will start following again
-        {
-            timer = 0;
-            cs.GetComponent<CompanionScript>().enabled = true;
-            Stay = false;
-            anim.SetFloat("wSpeed", 5);
-        }
+        //if (startCount) //Countdown to start
+        //{
+        //    timer -= timededuct * Time.deltaTime;
+        //}
+        //if (timer <= 0 && !cs.haveEnemy) //When it reaches O it stays at 0 and the Companion will start following again
+        //{
+        //    timer = 0;
+        //    cs.GetComponent<CompanionScript>().enabled = true;
+        //    Stay = false;
+        //    anim.SetFloat("wSpeed", 5);
+        //}
 
     }
 
@@ -70,7 +70,7 @@ public class Companion_Commands : MonoBehaviour
         {
             if (other.gameObject.tag == "Companion") //When the player is near the companion, the countdown doesn't start.
             {
-                timer = 3.5f;  
+                //timer = 3.5f;  
             }
         }
 

@@ -25,11 +25,11 @@ public class LiftScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.gameObject.tag == "Player")
-        {
-            liftAnim.GetComponent<Animator>().SetBool("isDown", false);
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if(other.gameObject.tag == "Player")
+    //    {
+    //        liftAnim.GetComponent<Animator>().SetBool("isDown", false);
+    //    }
+    //}
 }

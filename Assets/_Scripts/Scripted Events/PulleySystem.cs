@@ -4,16 +4,36 @@ using UnityEngine;
 
 public class PulleySystem : MonoBehaviour
 {
+    public Animator GateAnimator;
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionStay(Collision other)
     {
-        if(other.contactCount == 1)
+        print("Contact Count Enter: " + other.contactCount);
+
+        if(other.transform.tag == "Player" || other.transform.tag == "Companion")
         {
             //open gate halfway
+            GateAnimator.GetComponent<Animator>().Play("GateHalfwayUp");
         }
-        else if(other.contactCount > 1)
+        else if (other.transform.tag == "Player" && other.transform.tag == "Companion")
         {
             //open gate fully
+            GateAnimator.GetComponent<Animator>().Play("GateFullyOpen");
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        print("Contact Count Exit: " + other.contactCount);
+        if (other.transform.tag == "Player" || other.transform.tag == "Companion")
+        {
+            //open gate fully
+            GateAnimator.GetComponent<Animator>().Play("GateHalfwayDown");
+        }
+        else if (other.transform.tag == "Player" && other.transform.tag == "Companion")
+        {
+            //open gate full
+            GateAnimator.GetComponent<Animator>().Play("GateFullyClose");
         }
     }
 }

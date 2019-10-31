@@ -223,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 2156166426731282848, guid: 319a522fb9811a14e8f72296272524ff,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2156166426731282852, guid: 319a522fb9811a14e8f72296272524ff,
         type: 3}
@@ -3520,22 +3520,22 @@ PrefabInstance:
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Size.z
-      value: 0.9893336
+      value: 0.9257162
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.103085466
+      value: -0.10308554
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.z
-      value: -0.08235648
+      value: -0.114165284
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.55809456
+      value: -0.5580948
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
@@ -3619,27 +3619,27 @@ PrefabInstance:
     - target: {fileID: 5013666857775057310, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Size.z
-      value: 3.2243395
+      value: 5.501434
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857775057310, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.z
-      value: -0.14803553
+      value: 0.27836967
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857775057310, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Size.x
-      value: 3.8165646
+      value: 6.1879168
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857775057310, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.25469494
+      value: 0.030748844
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857775057505, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5013666858851674204, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}

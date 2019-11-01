@@ -10,4 +10,9 @@ public class ProjectileStart : MonoBehaviour
     {
         projectileSystem.SetActive(true);
     }
+
+    private void Update()
+    {
+        Destroy(gameObject, 5f);
+    }
 }

@@ -537,6 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastCheckpoint: {fileID: 0}
+  pausePanel: {fileID: 990961481}
 --- !u!1001 &253843349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2000,6 +2001,12 @@ MonoBehaviour:
   m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &990961481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9054963425645183488, guid: a7b8831780d9e2642bc55e539e54f9f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 990961478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &999315768
 GameObject:
   m_ObjectHideFlags: 0

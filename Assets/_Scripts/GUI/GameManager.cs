@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         pausePanel.SetActive(true);
         //Disable scripts that still work while timescale is set to 0
     }
-    private void ContinueGame()
+    public void ContinueGame()
     {
         Time.timeScale = 1;
         pausePanel.SetActive(false);

@@ -55789,6 +55789,12 @@ MonoBehaviour:
     FarClipPlane: 5000
     Dutch: 0
   m_ComponentOwner: {fileID: 1478893077}
+--- !u!1 &1194221558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9054963425645183488, guid: a7b8831780d9e2642bc55e539e54f9f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8196210649217628220}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1195707879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4314276073787374553, guid: 1323c6bea5c6afd4bbd16e32d3296bfa,
@@ -81689,9 +81695,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1700861972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f35634366a6ae34b85b9a9da84a509a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5973f4caf6f289c4e9819d4c819e5f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastCheckpoint: {fileID: 0}
+  pausePanel: {fileID: 1194221558}
 --- !u!1 &1701730078
 GameObject:
   m_ObjectHideFlags: 0

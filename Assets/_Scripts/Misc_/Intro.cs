@@ -6,13 +6,12 @@ public class Intro : MonoBehaviour
 {
     public GameObject introCutscene, introPlane, playerChar, playerCharUI;
     float timer = 24.1f;
+    public bool startIntro = false;
 
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-
-        if(timer <= 0)
+        if(!startIntro)
         {
             introCutscene.SetActive(false);
             introPlane.SetActive(false);
@@ -20,7 +19,22 @@ public class Intro : MonoBehaviour
             playerCharUI.SetActive(true);
         }
 
-        if (timer <= -3f) Destroy(this.gameObject);
-        print(timer);
+        if(startIntro)
+        {
+            playerChar.SetActive(false);
+            playerCharUI.SetActive(false);
+
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                introCutscene.SetActive(false);
+                introPlane.SetActive(false);
+                playerChar.SetActive(true);
+                playerCharUI.SetActive(true);
+            }
+
+            if (timer <= -3f) Destroy(this.gameObject);
+        }
     }
 }

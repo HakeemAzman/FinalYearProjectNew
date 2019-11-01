@@ -18,6 +18,6 @@ public class ButtonManager : MonoBehaviour
 
         yield return new WaitForSeconds(1.3f);
 
-        SceneManager.LoadScene("Main Level");
+        SceneManager.LoadScene("Level 1");
     }
 }

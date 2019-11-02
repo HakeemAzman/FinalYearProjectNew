@@ -11,6 +11,9 @@ TagManager:
   - Terrain
   - DistractionItem
   - Projectile
+  - TeleportB
+  - TeleportA
+  - PressurePlate
   layers:
   - Default
   - TransparentFX

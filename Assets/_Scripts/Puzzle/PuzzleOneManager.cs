@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PuzzleOneManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PuzzleOneManager : MonoBehaviour
 
     [SerializeField] AudioClip gateOpeningSound, heavyGateOpeningSound;
     AudioSource audioS;
+
+    public GameObject interactText;
     
     private void Start()
     {
@@ -18,11 +21,13 @@ public class PuzzleOneManager : MonoBehaviour
     {
         if (other.CompareTag("TeleportA") && Input.GetButtonDown("Stay"))
         {
+            interactText.SetActive(true);
             this.transform.position = cubeB.transform.position;
         }
 
         if (other.CompareTag("TeleportB") && Input.GetButtonDown("Stay"))
         {
+            interactText.SetActive(true);
             this.transform.position = cubeA.transform.position;
         }
 
@@ -50,6 +55,15 @@ public class PuzzleOneManager : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (other.gameObject.name == "ChainRobot")
+            interactText.SetActive(true);
+
+        if (other.CompareTag("TeleportA"))
+            interactText.SetActive(true);
+
+        if (other.CompareTag("TeleportB"))
+            interactText.SetActive(true);
+
         if (other.CompareTag("TeleportA") && Input.GetButtonDown("Stay"))
         {
             this.transform.position = cubeB.transform.position;
@@ -74,6 +88,19 @@ public class PuzzleOneManager : MonoBehaviour
         {
             StartCoroutine("LiftDown");
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "ChainRobot")
+            interactText.SetActive(false);
+
+        if (other.CompareTag("TeleportA"))
+            interactText.SetActive(false);
+
+        if (other.CompareTag("TeleportB"))
+            interactText.SetActive(false);
+
     }
 
     IEnumerator LiftDown()

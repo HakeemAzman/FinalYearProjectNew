@@ -37,7 +37,7 @@ public class AoeAttack : MonoBehaviour
         {
             if(nearbyEnemy.tag == "Enemy")
             {
-                nearbyEnemy.gameObject.GetComponent<EnemyHealth>().enemy_Health -= 100;
+                nearbyEnemy.gameObject.GetComponent<EnemyHealth>().enemy_Health -= 150;
             }
             //Rigidbody rb = nearbyEnemy.GetComponent<Rigidbody>();
             //if (rb != null)

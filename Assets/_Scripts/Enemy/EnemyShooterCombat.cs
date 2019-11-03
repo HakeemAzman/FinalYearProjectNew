@@ -83,11 +83,12 @@ public class EnemyShooterCombat : MonoBehaviour
     {
         Vector3 directionToTarget = (target.position - transform.position).normalized;
         float angle = Vector3.Angle(directionToTarget, transform.forward);
-
-        GetComponent<Animator>().SetTrigger("attackbow");
+        
 
         if(Mathf.Abs(angle) < 40 && timeSinceLastAttack > m_timeBetweenAttacks)
         {
+            GetComponent<Animator>().SetTrigger("attackbow");
+
             timeSinceLastAttack = 0;
 
             Rigidbody shellInstance = Instantiate(m_projectile, m_fireTransform.position, Quaternion.LookRotation(directionToTarget)) as Rigidbody;
@@ -101,7 +102,7 @@ public class EnemyShooterCombat : MonoBehaviour
 
     void Aim()
     {
-        if((timeSinceLastAttack >= 1f) && (timeSinceLastAttack < 3f))
+        if((timeSinceLastAttack >= 2f) && (timeSinceLastAttack < 3f))
         {
             m_laser.SetActive(true);
         }

@@ -12943,7 +12943,7 @@ MonoBehaviour:
   overrideColor: 0
   overridingColor: {r: 0.9999, g: 0.9999, b: 0.9999, a: 0.9999}
   useShadow: 1
-  shadowMapRenderTexture: {fileID: 300048250}
+  shadowMapRenderTexture: {fileID: 1208936878}
   useCookie: 1
   cookieMapRenderTexture: {fileID: 0}
   enableOutOfPhaseColor: 0
@@ -14000,38 +14000,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300020066}
   m_Mesh: {fileID: 4300000, guid: 4fecd5560aba7964a8742937aab6bc28, type: 3}
---- !u!84 &300048250
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_DepthFormat: 0
-  m_ColorFormat: 11
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &304442914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63768,6 +63736,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1113936112}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1208936878
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_DepthFormat: 0
+  m_ColorFormat: 11
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1212497073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85106,7 +85106,7 @@ PrefabInstance:
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.6009334
+      value: 1.1989079
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
@@ -85116,17 +85116,17 @@ PrefabInstance:
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.30046856
+      value: -0.099455774
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.15799569
+      value: -0.15799564
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.z
-      value: -0.1667451
+      value: -0.16674519
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}

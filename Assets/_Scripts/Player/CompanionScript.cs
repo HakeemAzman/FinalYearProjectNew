@@ -108,18 +108,14 @@ public class CompanionScript : MonoBehaviour
             anim.SetFloat("wSpeed", 0);
             speedFloat = 0;
             isPlayer = true;
-            if (canSlam)
-            {
-                ShieldBash();
-            }
-
-            canSlam = false;
-
+            print("ccb");
             if (other.gameObject.tag == "Enemy")
             {
                 isPlayer = false;
             }
         }
+
+        
 
         if (other.gameObject.tag == "Point1")
         {

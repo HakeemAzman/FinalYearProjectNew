@@ -38,16 +38,16 @@ public class Compbat : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
         {
             isEnemy = true;
             cs.speedFloat = 0;
             anim.gameObject.GetComponent<Animator>().SetBool("enemyF", true);
-            Debug.Log(anim);
             attackVFX.gameObject.GetComponent<TrailRenderer>().enabled = true;
             attackVFX2.gameObject.GetComponent<TrailRenderer>().enabled = true;
+            print("knn");
             //transform.LookAt(GameObject.FindWithTag("Enemy").transform.position);
         }
     }

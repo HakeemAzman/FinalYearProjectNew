@@ -23,7 +23,6 @@ public class AoeAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Terrain")
         {
-            print("Hi");
             areaofEffect();
         }
     }

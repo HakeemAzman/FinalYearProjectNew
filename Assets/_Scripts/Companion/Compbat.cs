@@ -38,7 +38,7 @@ public class Compbat : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
         {
@@ -47,7 +47,6 @@ public class Compbat : MonoBehaviour
             anim.gameObject.GetComponent<Animator>().SetBool("enemyF", true);
             attackVFX.gameObject.GetComponent<TrailRenderer>().enabled = true;
             attackVFX2.gameObject.GetComponent<TrailRenderer>().enabled = true;
-            print("knn");
             //transform.LookAt(GameObject.FindWithTag("Enemy").transform.position);
         }
     }
@@ -60,7 +59,7 @@ public class Compbat : MonoBehaviour
             isEnemy = false;
             cs.speedFloat = 5;
             anim.gameObject.GetComponent<Animator>().SetFloat("walk", 5);
-            anim.gameObject.GetComponent<Animator>().SetBool("enemyF", false);
+            //anim.gameObject.GetComponent<Animator>().SetBool("enemyF", false);
         }
     }
 

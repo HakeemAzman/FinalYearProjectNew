@@ -15,7 +15,7 @@ public class CompanionScript : MonoBehaviour
     public bool isPlayer;
     public bool haveEnemy;
     public bool isWandering;
-
+    public GameObject Player;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -107,14 +107,22 @@ public class CompanionScript : MonoBehaviour
         {
             anim.SetFloat("wSpeed", 0);
             speedFloat = 0;
-            isPlayer = true;
-            print("ccb");
-            if (other.gameObject.tag == "Enemy")
-            {
-                isPlayer = false;
-            }
+            //isPlayer = true;
+            
+        }
+        else if (other.gameObject.tag == "Enemy")
+        {
+            isPlayer = false;
+        }
+        if (!haveEnemy)
+        {
+            Player.gameObject.GetComponent<BoxCollider>().enabled = true;
         }
 
+        else if(haveEnemy)
+        {
+            Player.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
         
 
         if (other.gameObject.tag == "Point1")

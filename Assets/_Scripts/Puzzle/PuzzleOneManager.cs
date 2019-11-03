@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PuzzleOneManager : MonoBehaviour
 {
-    [SerializeField] GameObject cubeA, cubeB, gate, robotCage;
+    [SerializeField] GameObject cubeA, cubeB, gate, robotCage, cageObstacle,GateAnimator;
 
     [SerializeField] AudioClip gateOpeningSound, heavyGateOpeningSound;
     AudioSource audioS;
@@ -35,6 +35,17 @@ public class PuzzleOneManager : MonoBehaviour
         {
             audioS.PlayOneShot(heavyGateOpeningSound, 0.3f);
         }
+
+        if ((other.gameObject.name == "ObstacleChain") && Input.GetButtonDown("Stay"))
+        {
+            StartCoroutine("LiftDown");
+        }
+
+        if(other.gameObject.name == "PressurePlatePuzzle2")
+        {
+          GateAnimator.gameObject.GetComponent<Animator>().Play("GateOpenPuzzle2"); 
+        }
+    
     }
 
     private void OnTriggerStay(Collider other)
@@ -58,5 +69,17 @@ public class PuzzleOneManager : MonoBehaviour
         {
             robotCage.GetComponent<Animator>().Play("RobotCageOpen");
         }
+
+        if ((other.gameObject.name == "ObstacleChain") && Input.GetButtonDown("Stay"))
+        {
+            StartCoroutine("LiftDown");
+        }
+    }
+
+    IEnumerator LiftDown()
+    {
+        cageObstacle.GetComponent<Animator>().Play("CageObstacleLift");
+        yield return new WaitForSeconds(20f);
+        cageObstacle.GetComponent<Animator>().Play("CageObstacleLiftDown");
     }
 }

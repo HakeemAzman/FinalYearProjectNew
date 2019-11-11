@@ -7,44 +7,74 @@ public class CompanionScript : MonoBehaviour
     private NavMeshAgent agent;
     private Vector3 playerAI;
     private Animator anim;
-    public bool playerAiFound = true;
+    [Space]
+    [Header("Scripts")]
     public Companion_Commands cc;
     public CompanionHealth ch;
+    public AoeAttack aAttack;
+    [Space]
     public float speedFloat;
+    public float charges;
+    [Space]
+    [Header("Bool")]
     public bool canSlam;
     public bool isPlayer;
     public bool haveEnemy;
     public bool isWandering;
+    public bool playerAiFound = true;
+    [Space]
+    [Header("Gameobjects")]
     public GameObject Player;
+    public GameObject Overcharge;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         cc.GetComponent<Companion_Commands>();
         ch.GetComponent<CompanionHealth>();
+        aAttack.GetComponent<AoeAttack>();
     }
 
     void Update()
     {
-
         //if (!isPlayer && !haveEnemy)
         //{
         //    speedFloat = 0;
-        //    anim.SetFloat("wSpeed",0);
+        //    anim.SetFloat("wSpeed", 0);
         //}
 
+        if (charges >= 1)
+        {
+            aAttack.damage = 100;
+            //speedFloat = 10;
+        }
+        if (charges >= 3)
+        {
+            charges = 3;
+        }
+        if(charges <= 0)
+        {
+            Overcharge.SetActive(false);
+            charges = 0;
+        }
+
+        if(charges <= 0)
+        {
+            aAttack.damage = 30;
+        }
+       
         playerAI = FindClosestPlayer().transform.position;
         agent.destination = playerAI;
         gameObject.GetComponent<NavMeshAgent>().speed = speedFloat;
 
-        float dist = Vector3.Distance(gameObject.transform.position, GameObject.FindWithTag("Enemy").transform.position);
+        //float dist = Vector3.Distance(gameObject.transform.position, GameObject.FindWithTag("Enemy").transform.position);
 
 
-        if (dist >= 25)
-        {
-            canSlam = true;
-            speedFloat = 10;
-        }
+        //if (dist >= 25)
+        //{
+        //    canSlam = true;
+        //    speedFloat = 10;
+        //}
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -105,15 +135,20 @@ public class CompanionScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            anim.SetFloat("wSpeed", 0);
             speedFloat = 0;
-            //isPlayer = true;
+            print("This is happening");
+            anim.SetFloat("wSpeed", 0);
+            isPlayer = true;
             
         }
+
         else if (other.gameObject.tag == "Enemy")
         {
             isPlayer = false;
         }
+
+        
+
         if (!haveEnemy)
         {
             Player.gameObject.GetComponent<BoxCollider>().enabled = true;
@@ -128,6 +163,15 @@ public class CompanionScript : MonoBehaviour
         if (other.gameObject.tag == "Point1")
         {
             StartCoroutine("interacting");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Wrench")
+        {
+            Overcharge.SetActive(true);
+            charges += 1;
         }
     }
 

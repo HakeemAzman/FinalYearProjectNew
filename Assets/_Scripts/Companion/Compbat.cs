@@ -4,13 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Compbat : MonoBehaviour
 {
-    public GameObject VFXPrefab;
     public CompanionScript cs;
     public CompanionHealth ch;
     public Animator anim;
     public TrailRenderer attackVFX;
     public TrailRenderer attackVFX2;
-    public GameObject AoECollider;
     public bool isEnemy;
     // Start is called before the first frame update
 

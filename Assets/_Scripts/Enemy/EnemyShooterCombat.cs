@@ -22,6 +22,10 @@ public class EnemyShooterCombat : MonoBehaviour
     CompanionHealth companionHealth;
     #endregion
 
+    #region Enemy
+    Transform enemyTransform;
+    #endregion
+
     public Rigidbody m_projectile;
     public Transform m_fireTransform;
     public float m_launchForce;
@@ -33,21 +37,29 @@ public class EnemyShooterCombat : MonoBehaviour
     {
         targetPlayer = PlayerManager.instance.player.transform;
         targetCompanion = PlayerManager.instance.companion.transform;
-
         playerHealth = targetPlayer.GetComponent<PlayerHealth>();
         companionHealth = targetCompanion.GetComponent<CompanionHealth>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        enemyTransform = GameObject.FindWithTag("Enemy").transform;
+        Debug.Log(enemyTransform);
         timeSinceLastAttack += Time.deltaTime;
-        
 
-        AttackPlayer();
+
+        attackEnemy();
         //AttackCompanion();
 
         Aim();
+    }
+
+    public void attackEnemy()
+    {
+        FaceTarget(enemyTransform);
+        Fire(enemyTransform);
     }
 
     public void AttackPlayer()

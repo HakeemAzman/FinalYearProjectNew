@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public Image player_StaminaBar;
     [Space]
     public float jumpHeight;
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
 
     //Private Variables
     Rigidbody rb;
@@ -104,6 +106,15 @@ public class PlayerMovement : MonoBehaviour
             UpdateAnimator();
         }
 
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+
+        else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
         //Walking
         transform.Translate(playerMovement * player_Speed * Time.deltaTime, Space.World);
 
@@ -113,13 +124,14 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && isJumping)
         {
-            rb.AddForce(Vector3.up * jumpHeight);
+            GetComponent<Rigidbody>().velocity = Vector3.up * jumpHeight;
+            //rb.AddForce(Vector3.up * jumpHeight);
             isJumping = false;
         }
 
         if(!isJumping)
         {
-            jumpTimer -= 1 * Time.deltaTime;
+            jumpTimer -= 1f * Time.deltaTime;
 
             if (jumpTimer <= 1f)
                 rb.mass = 3f;
@@ -127,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
             if(jumpTimer <= 0)
             {
                 rb.mass = 1f;
-                jumpTimer = 2f;
+                jumpTimer = 1f;
                 isJumping = true;
             }
         }

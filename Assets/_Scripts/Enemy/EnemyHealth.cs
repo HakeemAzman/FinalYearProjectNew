@@ -39,6 +39,11 @@ public class EnemyHealth : MonoBehaviour
             gameObject.GetComponent<EnemyAgroMover>().enabled = false;
             StartCoroutine("reactivate");
         }
+
+        if(other.gameObject.tag == "Projectile")
+        {
+            enemy_Health -= 30;
+        }
     }
 
     IEnumerator reactivate()

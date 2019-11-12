@@ -5,7 +5,7 @@ using UnityEngine;
 public class Intro : MonoBehaviour
 {
     public GameObject introCutscene, introPlane, playerChar, playerCharUI;
-    float timer = 24.1f;
+    float timer = 23f;
     public bool startIntro = false;
 
     // Update is called once per frame
@@ -26,9 +26,11 @@ public class Intro : MonoBehaviour
 
             timer -= Time.deltaTime;
 
-            if (timer <= 0)
-            {
+            if(timer <= 2.2f)
                 introCutscene.SetActive(false);
+
+            if (timer <= 1f)
+            {
                 introPlane.SetActive(false);
                 playerChar.SetActive(true);
                 playerCharUI.SetActive(true);

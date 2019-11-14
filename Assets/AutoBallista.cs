@@ -24,6 +24,10 @@ public class AutoBallista : MonoBehaviour
     public Transform partToRotate;
     public float turnSpeed = 10f;
     public Transform firePos;
+    public float activeTime;
+
+    [Header("Bool")]
+    public bool isActivated = false;
 
     // Use this for initialization
     void Start()
@@ -61,16 +65,35 @@ public class AutoBallista : MonoBehaviour
 
     private void Update()
     {
-        LockOnTarget();
 
-        if (fireCountdown <= 0f)
+        if (isActivated)
         {
-            Shoot();
-            fireCountdown = 1f / fireRate;
+            activeTime -= 1 * Time.deltaTime;
+
+            if (fireCountdown <= 0f)
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
+
+            fireCountdown -= Time.deltaTime;
+
+            if(activeTime <= 0)
+            {
+                activeTime = 0;
+                Destroy(gameObject);
+                //isActivated = false;
+            }
+            LockOnTarget();
         }
 
-        fireCountdown -= Time.deltaTime;
+        //else if(!isActivated)
+        //{
+        //    return;
+        //}
     }
+
+    
 
     void LockOnTarget()
     {
@@ -101,6 +124,11 @@ public class AutoBallista : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.gameObject.tag == "Wrench")
+        {
+            isActivated = true;
+            //activeTime = 10;
+        }
         if (other.gameObject.tag == "Enemy")
             Destroy(bullet, 0.4f);
     }

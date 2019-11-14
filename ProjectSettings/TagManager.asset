@@ -16,6 +16,7 @@ TagManager:
   - PressurePlate
   - Puzzle2Cam
   - Wrench
+  - Ballista
   layers:
   - Default
   - TransparentFX

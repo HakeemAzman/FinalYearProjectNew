@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
 {
     #region Public and Private Variables
     [Header("Player Stats")]
-    public float player_Speed = 8f;
+    public float player_Speed;
+    public float player_SetSpeed;
     public float player_RunningSpeed = 15f;
     public float player_Stamina = 20f;
     public float player_CurrentStamina = 20f;
@@ -86,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         //Dashing is False
         else if (!isDashing)
         {
-            player_Speed = 8f; //Set Player speed back to normal
+            player_Speed = player_SetSpeed; //Set Player speed back to normal
             player_ShortDash = 3f; //Reset Dash time
             player_CurrentStamina += 1 * Time.deltaTime; //Recharge stamina bar
 
@@ -100,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
         if (player_CurrentStamina <= 0)
         {
             player_CurrentStamina = 0f;
-            player_Speed = 8f;
+            player_Speed = player_SetSpeed;
             isDashing = false;
 
             UpdateAnimator();

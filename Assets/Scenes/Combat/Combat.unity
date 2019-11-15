@@ -1198,9 +1198,10 @@ GameObject:
   m_Component:
   - component: {fileID: 595438928}
   - component: {fileID: 595438927}
+  - component: {fileID: 595438929}
   m_Layer: 0
   m_Name: Ballista
-  m_TagString: Untagged
+  m_TagString: Ballista
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1225,6 +1226,8 @@ MonoBehaviour:
   partToRotate: {fileID: 1198948824}
   turnSpeed: 20
   firePos: {fileID: 730960713}
+  activeTime: 10
+  isActivated: 0
 --- !u!4 &595438928
 Transform:
   m_ObjectHideFlags: 0
@@ -1240,6 +1243,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &595438929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595438926}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4901428, y: 3.957724, z: 3.227385}
+  m_Center: {x: 0.7187395, y: -1.478862, z: -0.5742581}
 --- !u!1 &683845331
 GameObject:
   m_ObjectHideFlags: 0
@@ -6252,6 +6268,21 @@ PrefabInstance:
       propertyPath: lowJumpMultiplier
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4855764377303991621, guid: 0a973ab461434aa44b84f33a76dc4a77,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855764377303991621, guid: 0a973ab461434aa44b84f33a76dc4a77,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855764377303991621, guid: 0a973ab461434aa44b84f33a76dc4a77,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 3.32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a973ab461434aa44b84f33a76dc4a77, type: 3}
 --- !u!1 &784832259 stripped
@@ -8383,6 +8414,7 @@ MonoBehaviour:
   wrench: {fileID: 333886110}
   coolDown: 5
   isAttack: 0
+  AB: {fileID: 595438927}
 --- !u!114 &2135668386 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3890260154428871084, guid: 0a973ab461434aa44b84f33a76dc4a77,
@@ -8933,7 +8965,7 @@ PrefabInstance:
     - target: {fileID: 5013666857775057310, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Size.z
-      value: 5.501434
+      value: 4.09
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857775057310, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
@@ -8943,7 +8975,7 @@ PrefabInstance:
     - target: {fileID: 5013666857775057310, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Size.x
-      value: 6.1879168
+      value: 4.06
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857775057310, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
@@ -8953,12 +8985,17 @@ PrefabInstance:
     - target: {fileID: 5013666857775057505, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857775057505, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013666857775057505, guid: f6b83f486cf4c384ebb12ccfbde50adb,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5013666858851893980, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}

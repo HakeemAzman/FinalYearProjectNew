@@ -45,7 +45,7 @@ public class Compbat : MonoBehaviour
             anim.gameObject.GetComponent<Animator>().SetBool("enemyF", true);
             attackVFX.gameObject.GetComponent<TrailRenderer>().enabled = true;
             attackVFX2.gameObject.GetComponent<TrailRenderer>().enabled = true;
-            //transform.LookAt(GameObject.FindWithTag("Enemy").transform.position);
+            transform.LookAt(GameObject.FindWithTag("Enemy").transform.position);
         }
     }
 
@@ -57,7 +57,7 @@ public class Compbat : MonoBehaviour
             isEnemy = false;
             cs.speedFloat = 5;
             anim.gameObject.GetComponent<Animator>().SetFloat("walk", 5);
-            //anim.gameObject.GetComponent<Animator>().SetBool("enemyF", false);
+            anim.gameObject.GetComponent<Animator>().SetBool("enemyF", false);
         }
     }
 

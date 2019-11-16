@@ -22,6 +22,7 @@ public class CompanionScript : MonoBehaviour
     public bool haveEnemy;
     public bool isWandering;
     public bool playerAiFound = true;
+    public bool enemyInSight;
     [Space]
     [Header("Gameobjects")]
     public GameObject Player;
@@ -67,9 +68,20 @@ public class CompanionScript : MonoBehaviour
         agent.destination = playerAI;
         gameObject.GetComponent<NavMeshAgent>().speed = speedFloat;
 
-        //float dist = Vector3.Distance(gameObject.transform.position, GameObject.FindWithTag("Enemy").transform.position);
+        float dist = Vector3.Distance(gameObject.transform.position, GameObject.FindWithTag("Enemy").transform.position);
+        
+        if(dist <= 20)
+        {
+            enemyInSight = true;
+        }
 
+        if(dist > 20)
+        {
+            haveEnemy = false;
 
+            enemyInSight = false;
+        }
+        Debug.Log(dist);
         //if (dist >= 25)
         //{
         //    canSlam = true;
@@ -84,21 +96,26 @@ public class CompanionScript : MonoBehaviour
 
     GameObject FindClosestPlayer()
     {
-
+        GameObject[] eTargets;
         GameObject[] targets;
 
-        targets = GameObject.FindGameObjectsWithTag("Enemy");
-        if (targets.Length >= 1)
+        eTargets = GameObject.FindGameObjectsWithTag("Enemy");
+        targets = GameObject.FindGameObjectsWithTag("Player");
+
+        if (enemyInSight && eTargets.Length >= 1)
         {
             haveEnemy = true;
-        }
-        if (targets.Length == 0 && isWandering)
-        {
-            targets = GameObject.FindGameObjectsWithTag("Interest");
+            targets = GameObject.FindGameObjectsWithTag("Enemy");
         }
 
-        if (targets.Length == 0 && !isWandering)
+        //if (targets.Length == 0 && isWandering)
+        //{
+        //    targets = GameObject.FindGameObjectsWithTag("Interest");
+        //}
+
+        if (eTargets.Length == 0 && !isWandering)
         {
+            enemyInSight = false;
             haveEnemy = false;
             targets = GameObject.FindGameObjectsWithTag("Player");
         }
@@ -136,7 +153,6 @@ public class CompanionScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             speedFloat = 0;
-            print("This is happening");
             anim.SetFloat("wSpeed", 0);
             isPlayer = true;
             
@@ -179,6 +195,7 @@ public class CompanionScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            isPlayer = false;
             speedFloat = 5;
             gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = true;
 

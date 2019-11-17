@@ -6,14 +6,17 @@ public class EnemyHealth : MonoBehaviour
 {
     public int enemy_Health;
     public GameObject deathParticle;
+    [Space]
     public Compbat combatS;
     public CompanionScript cs;
-    public NavMeshAgent navAgent;
-    Vector3 direction;
+    [Space]
+    Animator enemyMovement;
+
     public void Start()
     {
         cs = GameObject.FindWithTag("Companion").GetComponent<CompanionScript>();
         combatS = GameObject.FindWithTag("Companion").GetComponent<Compbat>();
+        enemyMovement = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -27,11 +30,27 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.tag == "ArmAttack")
-    //    {
-    //        //enemy_Health -= 1000;
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Wrench")
+        {
+            enemyMovement.GetComponent<Animator>().SetFloat("forwardSpeed", 0);
+            gameObject.GetComponent<EnemyAgroCombat>().enabled = false;
+            gameObject.GetComponent<EnemyAgroMover>().enabled = false;
+            StartCoroutine("reactivate");
+        }
+
+        if(other.gameObject.tag == "Projectile")
+        {
+            enemy_Health -= 30;
+        }
+    }
+
+    IEnumerator reactivate()
+    {
+        yield return new WaitForSeconds(3);
+        gameObject.GetComponent<EnemyAgroCombat>().enabled = true;
+        gameObject.GetComponent<EnemyAgroMover>().enabled = true;
+        enemyMovement.GetComponent<Animator>().SetFloat("forwardSpeed", 6);
+    }
 }

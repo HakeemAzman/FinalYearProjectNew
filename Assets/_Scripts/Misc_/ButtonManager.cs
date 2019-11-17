@@ -9,15 +9,20 @@ public class ButtonManager : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(StartGameAnims());
+        planeAnim.GetComponent<Animator>().SetBool("canFlyForward", true);
+
+        if(planeAnim.GetComponent<Animator>().GetBool("canFlyForward") == true)
+        {
+            planeAnim.GetComponent<Animator>().Play("FlyForward");
+
+            StartCoroutine(StartGameAnims());
+        }
     }
 
     IEnumerator StartGameAnims()
     {
-        planeAnim.GetComponent<Animator>().Play("FlyFront");
+        yield return new WaitForSeconds(5f);
 
-        yield return new WaitForSeconds(1.3f);
-
-        SceneManager.LoadScene("Main Level");
+        SceneManager.LoadScene("Level 1");
     }
 }

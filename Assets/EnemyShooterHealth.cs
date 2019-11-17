@@ -36,9 +36,21 @@ public class EnemyShooterHealth : MonoBehaviour
     {
         if (other.gameObject.tag == "Wrench")
         {
-            esC.enabled = true;
+            gameObject.GetComponent<EnemyShooterCombat>().enabled = false;
             StartCoroutine("reactivate");
+        }
+
+        if (other.gameObject.tag == "Projectile")
+        {
+            enemy_Health -= 40;
         }
     }
 
+    IEnumerator reactivate()
+    {
+        yield return new WaitForSeconds(3);
+        gameObject.GetComponent<EnemyShooterCombat>().enabled = true;
+    }
 }
+
+

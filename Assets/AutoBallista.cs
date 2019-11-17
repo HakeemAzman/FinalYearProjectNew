@@ -111,7 +111,7 @@ public class AutoBallista : MonoBehaviour
             firePos.position,
             firePos.rotation
             );
-        Destroy(bullet, 1f);
+        Destroy(bullet, 3f);
 
         ShootStats ss = bullet.GetComponent<ShootStats>();
 

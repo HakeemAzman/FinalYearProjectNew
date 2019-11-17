@@ -45,12 +45,12 @@ public class EnemyShooterCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyTransform = GameObject.FindWithTag("Enemy").transform;
-        Debug.Log(enemyTransform);
+        //enemyTransform = GameObject.FindWithTag("Enemy").transform;
+        //Debug.Log(enemyTransform);
         timeSinceLastAttack += Time.deltaTime;
 
 
-        attackEnemy();
+        AttackPlayer();
         //AttackCompanion();
 
         Aim();

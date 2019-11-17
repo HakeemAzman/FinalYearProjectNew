@@ -42,12 +42,14 @@ public class ProjectileHit : MonoBehaviour
         {
             playerHealth.playerCurrentHealth -= damageOutput;
             Instantiate(explosionParticle, transform.position, transform.rotation);
+            Destroy(gameObject);
             gameObject.SetActive(false);
         }
         else if (other.transform == targetCompanion) //does damage to the companion
         {
             companionHealth.companionHealth -= damageOutput;
             Instantiate(explosionParticle, transform.position, transform.rotation);
+            Destroy(gameObject);
             gameObject.SetActive(false);
         }
     }

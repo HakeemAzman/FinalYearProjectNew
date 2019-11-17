@@ -42,7 +42,7 @@ public class EnemyHealth : MonoBehaviour
 
         if(other.gameObject.tag == "Projectile")
         {
-            enemy_Health -= 30;
+            enemy_Health -= 40;
         }
     }
 

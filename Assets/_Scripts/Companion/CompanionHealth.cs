@@ -5,10 +5,11 @@ using UnityEngine.UI;
 public class CompanionHealth : MonoBehaviour
 {
     public float companionHealth;
+    public float companionCurrentHealth;
     public CompanionScript cs;
     public Compbat compS;
     public Animator anim;
-    public Slider enduranceBar;
+    public Image enduranceBar;
     public BoxCollider leftArm;
     public BoxCollider rightArm; 
     public GameObject shieldSphere;
@@ -24,7 +25,7 @@ public class CompanionHealth : MonoBehaviour
     {
 
         
-        enduranceBar.value = companionHealth;
+        enduranceBar.fillAmount = companionCurrentHealth / companionHealth;
         if (companionHealth <= 0)
         {
             leftArm.gameObject.GetComponent<BoxCollider>().enabled = false;

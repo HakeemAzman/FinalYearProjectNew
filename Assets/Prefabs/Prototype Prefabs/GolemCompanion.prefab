@@ -340,9 +340,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5013666858851903752}
-  m_LocalRotation: {x: -0.66207784, y: 0.08035833, z: 0.07245517, w: 0.74158335}
-  m_LocalPosition: {x: -0.9153779, y: 0, z: 0.00000030517577}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_LocalRotation: {x: -0.6620777, y: 0.080358386, z: 0.07245513, w: 0.74158347}
+  m_LocalPosition: {x: -0.9153774, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5013666858851643426}
   - {fileID: 5013666858851740838}
@@ -654,14 +654,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d119882d2d2994aab09b807473d58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAiFound: 1
   cc: {fileID: 0}
   ch: {fileID: 1228161214}
+  aAttack: {fileID: 0}
   speedFloat: 5
+  charges: 0
   canSlam: 0
   isPlayer: 0
   haveEnemy: 0
   isWandering: 0
+  playerAiFound: 1
+  Player: {fileID: 0}
 --- !u!114 &5013666857775057308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,14 +678,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VFXPrefab: {fileID: 0}
-  aoeAttack: {fileID: 0}
-  radius: 0
-  kbForce: 300
   cs: {fileID: 5013666857775057311}
   ch: {fileID: 1228161214}
   anim: {fileID: 4955745109251439030}
   attackVFX: {fileID: 0}
   attackVFX2: {fileID: 0}
+  AoECollider: {fileID: 0}
   isEnemy: 0
 --- !u!114 &1228161214
 MonoBehaviour:
@@ -697,12 +698,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   companionHealth: 0
+  companionCurrentHealth: 0
   cs: {fileID: 5013666857775057311}
   compS: {fileID: 5013666857775057308}
   anim: {fileID: 4955745109251439030}
   enduranceBar: {fileID: 0}
   leftArm: {fileID: 0}
   rightArm: {fileID: 0}
+  shieldSphere: {fileID: 0}
 --- !u!1 &5013666858851917954
 GameObject:
   m_ObjectHideFlags: 0

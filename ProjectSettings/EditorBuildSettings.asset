@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu/MainMenu.unity
     guid: 1b16fa64f81d4db44bf1b132f969d640
-  - enabled: 0
-    path: Assets/Scenes/PROTOTYPE/Main Level/Main Level.unity
-    guid: 119cdce8be6a5e141ab5b60b5d93bfba
   - enabled: 1
-    path: Assets/Scenes/PROTOTYPE/Main Level/Dania Level Debug/Dania Main Level.unity
-    guid: feafc08b03e1dbb4ca50520a8de7af7b
+    path: Assets/Scenes/Main Game/Level 1.unity
+    guid: e15d8c48521baee4094d8310c615cc5a
+  - enabled: 0
+    path: Assets/Scenes/PROTOTYPE/Main Level/Dania Level Debug/Dania Level Debug 2.unity
+    guid: f2a0d613166be0743b64dbcd345d5e13
   m_configObjects: {}

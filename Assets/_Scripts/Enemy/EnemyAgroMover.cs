@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Game.Control
-{
+//namespace Game.Control
+
     public class EnemyAgroMover : MonoBehaviour
     {
         [SerializeField] float lookRadius = 5f;
@@ -153,4 +153,3 @@ namespace Game.Control
             Gizmos.DrawWireSphere(transform.position, lookRadius);
         }
     }
-}

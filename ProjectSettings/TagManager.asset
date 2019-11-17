@@ -11,12 +11,6 @@ TagManager:
   - Terrain
   - DistractionItem
   - Projectile
-  - TeleportB
-  - TeleportA
-  - PressurePlate
-  - Puzzle2Cam
-  - Wrench
-  - Ballista
   layers:
   - Default
   - TransparentFX
@@ -28,7 +22,7 @@ TagManager:
   - 
   - PostProcessing
   - Player
-  - Companion
+  - 
   - 
   - 
   - 

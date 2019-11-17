@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Compbat : MonoBehaviour
 {
+    public GameObject VFXPrefab;
     public CompanionScript cs;
     public CompanionHealth ch;
     public Animator anim;
     public TrailRenderer attackVFX;
     public TrailRenderer attackVFX2;
+    public GameObject AoECollider;
     public bool isEnemy;
     // Start is called before the first frame update
 
@@ -43,9 +45,10 @@ public class Compbat : MonoBehaviour
             isEnemy = true;
             cs.speedFloat = 0;
             anim.gameObject.GetComponent<Animator>().SetBool("enemyF", true);
+            Debug.Log(anim);
             attackVFX.gameObject.GetComponent<TrailRenderer>().enabled = true;
             attackVFX2.gameObject.GetComponent<TrailRenderer>().enabled = true;
-            transform.LookAt(GameObject.FindWithTag("Enemy").transform.position);
+            //transform.LookAt(GameObject.FindWithTag("Enemy").transform.position);
         }
     }
 

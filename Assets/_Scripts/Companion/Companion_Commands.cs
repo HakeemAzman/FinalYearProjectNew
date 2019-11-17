@@ -6,17 +6,21 @@ public class Companion_Commands : MonoBehaviour
 {
     public GameObject companion;
     public CompanionScript cs;
+    public CompanionMovement cm;
+    public Transform mountPos;
     public float timer = 5;
     public float timededuct = 1;
     bool startCount = false;
     public bool Stay;
     public bool canMount;
+    public CompanionManager cMan;
     public Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         cs.gameObject.GetComponent<CompanionScript>();
+        cm.gameObject.GetComponent<CompanionMovement>();
 
         Stay = false;
     }

@@ -22,10 +22,6 @@ public class EnemyShooterCombat : MonoBehaviour
     CompanionHealth companionHealth;
     #endregion
 
-    #region Enemy
-    Transform enemyTransform;
-    #endregion
-
     public Rigidbody m_projectile;
     public Transform m_fireTransform;
     public float m_launchForce;
@@ -37,29 +33,21 @@ public class EnemyShooterCombat : MonoBehaviour
     {
         targetPlayer = PlayerManager.instance.player.transform;
         targetCompanion = PlayerManager.instance.companion.transform;
+
         playerHealth = targetPlayer.GetComponent<PlayerHealth>();
         companionHealth = targetCompanion.GetComponent<CompanionHealth>();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemyTransform = GameObject.FindWithTag("Enemy").transform;
-        Debug.Log(enemyTransform);
         timeSinceLastAttack += Time.deltaTime;
+        
 
-
-        attackEnemy();
+        AttackPlayer();
         //AttackCompanion();
 
         Aim();
-    }
-
-    public void attackEnemy()
-    {
-        FaceTarget(enemyTransform);
-        Fire(enemyTransform);
     }
 
     public void AttackPlayer()
@@ -95,12 +83,11 @@ public class EnemyShooterCombat : MonoBehaviour
     {
         Vector3 directionToTarget = (target.position - transform.position).normalized;
         float angle = Vector3.Angle(directionToTarget, transform.forward);
-        
+
+        GetComponent<Animator>().SetTrigger("attackbow");
 
         if(Mathf.Abs(angle) < 40 && timeSinceLastAttack > m_timeBetweenAttacks)
         {
-            GetComponent<Animator>().SetTrigger("attackbow");
-
             timeSinceLastAttack = 0;
 
             Rigidbody shellInstance = Instantiate(m_projectile, m_fireTransform.position, Quaternion.LookRotation(directionToTarget)) as Rigidbody;
@@ -114,7 +101,7 @@ public class EnemyShooterCombat : MonoBehaviour
 
     void Aim()
     {
-        if((timeSinceLastAttack >= 2f) && (timeSinceLastAttack < 3f))
+        if((timeSinceLastAttack >= 1f) && (timeSinceLastAttack < 3f))
         {
             m_laser.SetActive(true);
         }

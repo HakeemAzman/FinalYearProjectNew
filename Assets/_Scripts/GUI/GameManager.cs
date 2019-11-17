@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,13 +33,6 @@ public class GameManager : MonoBehaviour
                 ContinueGame();
             }
         }
-    }
-
-    public void Restart()
-    {
-        Scene thisScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(thisScene.name);
-        Time.timeScale = 1;
     }
 
     private void PauseGame()

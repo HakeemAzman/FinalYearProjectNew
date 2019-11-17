@@ -6,16 +6,11 @@ public class AoeAttack : MonoBehaviour
 {
     public float radius;
     public float kbForce;
-    public int damage = 30;
-    public CompanionScript cs;
-    public GameObject Player;
     //public EnemyHealth eH;
-
     // Start is called before the first frame update
     void Start()
     {
-        // eH = GameObject.FindWithTag("Enemy").GetComponent<EnemyHealth>();
-        cs.GetComponent<CompanionScript>();
+       // eH = GameObject.FindWithTag("Enemy").GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -28,20 +23,21 @@ public class AoeAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Terrain")
         {
+            print("Hi");
             areaofEffect();
         }
     }
 
     void areaofEffect()
     {
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
 
         foreach (Collider nearbyEnemy in colliders)
         {
             if(nearbyEnemy.tag == "Enemy")
             {
-                nearbyEnemy.gameObject.GetComponent<EnemyHealth>().enemy_Health -= damage;
-                cs.charges -= 1;
+                nearbyEnemy.gameObject.GetComponent<EnemyHealth>().enemy_Health -= 100;
             }
             //Rigidbody rb = nearbyEnemy.GetComponent<Rigidbody>();
             //if (rb != null)

@@ -8,8 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     #region Public and Private Variables
     [Header("Player Stats")]
-    public float player_Speed;
-    public float player_SetSpeed;
+    public float player_Speed = 8f;
     public float player_RunningSpeed = 15f;
     public float player_Stamina = 20f;
     public float player_CurrentStamina = 20f;
@@ -19,8 +18,6 @@ public class PlayerMovement : MonoBehaviour
     public Image player_StaminaBar;
     [Space]
     public float jumpHeight;
-    public float fallMultiplier = 2.5f;
-    public float lowJumpMultiplier = 2f;
 
     //Private Variables
     Rigidbody rb;
@@ -87,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         //Dashing is False
         else if (!isDashing)
         {
-            player_Speed = player_SetSpeed; //Set Player speed back to normal
+            player_Speed = 8f; //Set Player speed back to normal
             player_ShortDash = 3f; //Reset Dash time
             player_CurrentStamina += 1 * Time.deltaTime; //Recharge stamina bar
 
@@ -101,21 +98,12 @@ public class PlayerMovement : MonoBehaviour
         if (player_CurrentStamina <= 0)
         {
             player_CurrentStamina = 0f;
-            player_Speed = player_SetSpeed;
+            player_Speed = 8f;
             isDashing = false;
 
             UpdateAnimator();
         }
 
-        if (rb.velocity.y < 0)
-        {
-            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-
-        else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
-        {
-            rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
         //Walking
         transform.Translate(playerMovement * player_Speed * Time.deltaTime, Space.World);
 
@@ -125,14 +113,13 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && isJumping)
         {
-            GetComponent<Rigidbody>().velocity = Vector3.up * jumpHeight;
-            //rb.AddForce(Vector3.up * jumpHeight);
+            rb.AddForce(Vector3.up * jumpHeight);
             isJumping = false;
         }
 
         if(!isJumping)
         {
-            jumpTimer -= 1f * Time.deltaTime;
+            jumpTimer -= 1 * Time.deltaTime;
 
             if (jumpTimer <= 1f)
                 rb.mass = 3f;
@@ -140,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
             if(jumpTimer <= 0)
             {
                 rb.mass = 1f;
-                jumpTimer = 1f;
+                jumpTimer = 2f;
                 isJumping = true;
             }
         }

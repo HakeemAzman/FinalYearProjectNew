@@ -1246,8 +1246,8 @@ GameObject:
   m_Name: Cube (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &462611853
 Transform:
@@ -6859,7 +6859,13 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 3.32
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4855764377303991620, guid: 0a973ab461434aa44b84f33a76dc4a77,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4855764377303991620, guid: 0a973ab461434aa44b84f33a76dc4a77, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0a973ab461434aa44b84f33a76dc4a77, type: 3}
 --- !u!1 &784832259 stripped
 GameObject:
@@ -9950,6 +9956,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnduranceBar
       objectReference: {fileID: 0}
+    - target: {fileID: 4803635995873251801, guid: 98b7b34ef544524439dceecf511dd74c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4803635995873251802, guid: 98b7b34ef544524439dceecf511dd74c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10058,12 +10069,12 @@ PrefabInstance:
     - target: {fileID: 4803635996636283671, guid: 98b7b34ef544524439dceecf511dd74c,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4803635996636283671, guid: 98b7b34ef544524439dceecf511dd74c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98b7b34ef544524439dceecf511dd74c, type: 3}
@@ -10083,41 +10094,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.69813585
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
-        type: 3}
-      propertyPath: m_Center.y
-      value: -0.024346648
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.11290119
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.528368
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.3208479
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857775057311, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
@@ -10217,27 +10193,27 @@ PrefabInstance:
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Size.z
-      value: 0.96
+      value: 1.3229654
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.10308554
+      value: -0.10308558
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.z
-      value: -0.114165284
+      value: 0.067318715
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.5580948
+      value: -0.67919075
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.81
+      value: 1.052187
       objectReference: {fileID: 0}
     - target: {fileID: 5013666857938687362, guid: f6b83f486cf4c384ebb12ccfbde50adb,
         type: 3}
@@ -10249,10 +10225,45 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.69813585
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.024346648
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.11290119
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.528368
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.3208479
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013666858589035185, guid: f6b83f486cf4c384ebb12ccfbde50adb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1228161214, guid: f6b83f486cf4c384ebb12ccfbde50adb, type: 3}
       propertyPath: enduranceBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1859821139}
     - target: {fileID: 1228161214, guid: f6b83f486cf4c384ebb12ccfbde50adb, type: 3}
       propertyPath: companionHealth
       value: 1000

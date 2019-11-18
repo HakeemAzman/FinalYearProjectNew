@@ -11,6 +11,7 @@ public class CutsceneActivate : MonoBehaviour
 
     bool cutsceneActivated;
     public GameObject player;
+    public GameObject cinemachineCutCams;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +27,7 @@ public class CutsceneActivate : MonoBehaviour
         player.GetComponent<PlayerMovement>().player_SetSpeed = 0;
         yield return new WaitForSeconds(cutsceneLengthInSecs);
         player.GetComponent<PlayerMovement>().player_SetSpeed = 8;
+        cinemachineCutCams.SetActive(false);
         Destroy(this.gameObject);
     }
 }

@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 00000000000000000000000000000000
+  productGUID: aaee47d24b8359844bae1d8fd90ffdc5
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -698,7 +698,7 @@ PlayerSettings:
   apiCompatibilityLevel: 2
   cloudProjectId: 74ab44a2-73c6-4535-8459-d70896c2d376
   framebufferDepthMemorylessMode: 0
-  projectName: EffectsExamples
+  projectName: FYP (2)
   organizationId: nurhakeemazman
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

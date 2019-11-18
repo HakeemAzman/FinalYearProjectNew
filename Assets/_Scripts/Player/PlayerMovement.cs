@@ -44,7 +44,9 @@ public class PlayerMovement : MonoBehaviour
         float zAxis = Input.GetAxis("Vertical");
         
         Vector3 playerMovement = new Vector3(xAxis, 0, zAxis);
-
+       
+        playerMovement = Camera.main.transform.TransformDirection(playerMovement);
+        playerMovement.y = 0.0f;
 
         if (xAxis + zAxis != 0) //If there is no movement, the rotation of the character will not revert back to 0 but instead stay at the currect rotation
         {

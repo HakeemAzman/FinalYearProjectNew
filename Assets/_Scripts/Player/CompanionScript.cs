@@ -81,7 +81,6 @@ public class CompanionScript : MonoBehaviour
 
             enemyInSight = false;
         }
-        Debug.Log(dist);
         //if (dist >= 25)
         //{
         //    canSlam = true;

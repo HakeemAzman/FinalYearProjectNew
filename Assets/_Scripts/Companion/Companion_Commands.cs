@@ -12,7 +12,7 @@ public class Companion_Commands : MonoBehaviour
     public bool Stay;
     public bool canMount;
     public Animator anim;
-
+    public float callTimer =1;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,28 +25,32 @@ public class Companion_Commands : MonoBehaviour
     void Update()
     {
         Physics.IgnoreCollision(companion.GetComponent<Collider>(), gameObject.GetComponent<Collider>());
-
         //if (Input.GetButtonDown("Mount") && canMount)
         //{
         //    cMan.enableCompanion = true;
         //    cMan.enablePlayer = false;
         //    //Mount();
         //}
-
-        if (Input.GetButton("Stay") && !Stay) //Pressing X allows the Player to make the Companion stay at the current spot.
+        print("Stay");
+        if (Input.GetButtonUp("Stay")) //Pressing X allows the Player to make the Companion stay at the current spot.
         {
-            cs.GetComponent<CompanionScript>().enabled = false;
-            anim.SetFloat("wSpeed", 0);
-            Stay = true;
-            
+            if(!Stay)
+            {
+                Stay = true;
+                print("stay");
+                cs.GetComponent<CompanionScript>().enabled = false;
+                anim.SetFloat("wSpeed", 0);
+            }
+            else
+            {
+                Stay = false;
+                print("call");
+                cs.GetComponent<CompanionScript>().enabled = true; //Pressing X again allows the Companion to follow from the current spot.
+                cs.speedFloat = 5;
+                callTimer = 1;
+            }
         }
 
-        if (Input.GetButton("Call") && Stay)
-        {
-            cs.GetComponent<CompanionScript>().enabled = true; //Pressing X again allows the Companion to follow from the current spot.
-            Stay = false;
-            cs.speedFloat = 5;
-        }
 
         //if (startCount) //Countdown to start
         //{
@@ -74,7 +78,7 @@ public class Companion_Commands : MonoBehaviour
         {
             if (other.gameObject.tag == "Companion")
             {
-                startCount = true;
+                //startCount = true;
                 //canMount = false;
             }
         }

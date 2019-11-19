@@ -124858,8 +124858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obs: {fileID: 846484914}
-  cutsceneLengthInSecs: 26
-  pd: {fileID: 846484916}
+  cutsceneLengthInSecs: 27
   player: {fileID: 1694439831}
   cinemachineCutCams: {fileID: 846484914}
 --- !u!1001 &2127285699

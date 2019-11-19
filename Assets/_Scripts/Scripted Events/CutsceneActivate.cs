@@ -1,13 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Playables;
 
 public class CutsceneActivate : MonoBehaviour
 {
     public GameObject obs;
     public float cutsceneLengthInSecs;
-    public PlayableDirector pd;
 
     bool cutsceneActivated;
     public GameObject player;

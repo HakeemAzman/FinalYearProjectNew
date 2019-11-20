@@ -5400,6 +5400,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24366421}
   m_Enabled: 1
@@ -5440,6 +5441,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24366421}
 =======
+=======
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24366421}
   m_Enabled: 1
@@ -5479,6 +5482,9 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24366421}
+<<<<<<< HEAD
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
+=======
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &25607929 stripped
@@ -9416,8 +9422,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140203111}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.3157593, y: -0.17609777, z: 0.05976167, w: 0.9304376}
   m_LocalPosition: {x: -34.65127, y: 12.780003, z: 4.917015}
+=======
+  m_LocalRotation: {x: 0.31575936, y: -0.1760976, z: 0.05976162, w: 0.9304376}
+  m_LocalPosition: {x: 456.51874, y: 46.450005, z: 97.617004}
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
   m_LocalRotation: {x: 0.31575936, y: -0.1760976, z: 0.05976162, w: 0.9304376}
   m_LocalPosition: {x: 456.51874, y: 46.450005, z: 97.617004}
@@ -44422,6 +44433,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9890254a95f72d24683f64107eaecc30, type: 2}
     m_RemovedComponents: []
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   m_SourcePrefab: {fileID: 100100000, guid: 217ad5db5438bce46ab397884abec396, type: 3}
 --- !u!1001 &582457873
@@ -44496,6 +44508,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 9890254a95f72d24683f64107eaecc30, type: 2}
     m_RemovedComponents: []
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
+=======
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
   m_SourcePrefab: {fileID: 100100000, guid: f0f74cb558cbc9d4e9bc3b12026e3b3a, type: 3}
 --- !u!4 &582457874 stripped
@@ -46849,7 +46863,10 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9054963425645183488, guid: a7b8831780d9e2642bc55e539e54f9f1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
     type: 3}
   m_PrefabInstance: {fileID: 8196210649217628220}
   m_PrefabAsset: {fileID: 0}
@@ -46929,6 +46946,9 @@ PrefabInstance:
 --- !u!4 &653768945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f0f74cb558cbc9d4e9bc3b12026e3b3a,
+<<<<<<< HEAD
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
+=======
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
     type: 3}
   m_PrefabInstance: {fileID: 653768944}
@@ -55561,6 +55581,7 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 217ad5db5438bce46ab397884abec396, type: 3}
 --- !u!1 &919547666
+<<<<<<< HEAD
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55814,6 +55835,8 @@ Transform:
   m_PrefabInstance: {fileID: 925649694}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &928425031
+=======
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56157,6 +56180,9 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928425031}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 --- !u!1 &930244798
@@ -60233,7 +60259,10 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 700a84c9a976cc84ab56493386eee7d8, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 --- !u!1 &1036227773
 GameObject:
   m_ObjectHideFlags: 0
@@ -61209,7 +61238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -83.63
+=======
+      value: 407.54
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
       value: 407.54
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
@@ -61218,7 +61251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -50.55
+=======
+      value: -16.88
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
       value: -16.88
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
@@ -61227,7 +61264,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 35.72
+=======
+      value: 128.42
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
       value: 128.42
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
@@ -74428,7 +74469,11 @@ Transform:
   - {fileID: 2126655660}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 7
+=======
+  m_RootOrder: 8
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
   m_RootOrder: 8
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
@@ -74548,6 +74593,9 @@ MeshFilter:
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< HEAD
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
+=======
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
   m_Modification:
     m_TransformParent: {fileID: 1356442658}
@@ -75644,7 +75692,10 @@ Transform:
   - {fileID: 1621739968}
   - {fileID: 781263916}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
   - {fileID: 1661406054}
   - {fileID: 142962785}
   - {fileID: 1368622946}
@@ -75656,6 +75707,9 @@ Transform:
   - {fileID: 653768945}
   - {fileID: 118803762}
   - {fileID: 1689616055}
+<<<<<<< HEAD
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
+=======
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
   m_Father: {fileID: 1675878333}
   m_RootOrder: 2
@@ -76347,7 +76401,10 @@ Transform:
   m_PrefabInstance: {fileID: 1172429420}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 --- !u!1001 &1368622945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77543,8 +77600,13 @@ Transform:
   m_GameObject: {fileID: 1403940210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 100.1694, y: 281.45792, z: 141.24432}
   m_LocalScale: {x: 2.0427763, y: 0.79764, z: 3.8765767}
+=======
+  m_LocalPosition: {x: 99.89, y: 281.45792, z: 141.28}
+  m_LocalScale: {x: 2.0162203, y: 0.79764, z: 3.8765767}
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
   m_LocalPosition: {x: 99.89, y: 281.45792, z: 141.28}
   m_LocalScale: {x: 2.0162203, y: 0.79764, z: 3.8765767}
@@ -91871,7 +91933,11 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2100000, guid: 9890254a95f72d24683f64107eaecc30, type: 2}
+=======
+  - {fileID: 2100000, guid: 83959fbf14b1b084f855f913fc531565, type: 2}
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
   - {fileID: 2100000, guid: 83959fbf14b1b084f855f913fc531565, type: 2}
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
@@ -100791,6 +100857,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1655502123
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 GameObject:
   m_ObjectHideFlags: 0
@@ -100977,6 +101045,104 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655502123}
   m_Mesh: {fileID: 4300000, guid: 0109f0f01845af642af3618bcfe28673, type: 3}
+--- !u!1 &1657412979
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1655502124}
+  - component: {fileID: 1655502127}
+  - component: {fileID: 1655502126}
+  - component: {fileID: 1655502125}
+  m_Layer: 0
+  m_Name: Small Stairs (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1655502124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655502123}
+  m_LocalRotation: {x: -0.5011593, y: -0.498838, z: -0.498838, w: 0.5011593}
+  m_LocalPosition: {x: 78.5, y: 298.26, z: 217.5}
+  m_LocalScale: {x: 6.095132, y: 6.8711853, z: 3.3078477}
+  m_Children: []
+  m_Father: {fileID: 829238831}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.266}
+--- !u!64 &1655502125
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655502123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 0109f0f01845af642af3618bcfe28673, type: 3}
+--- !u!23 &1655502126
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1655502123}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9890254a95f72d24683f64107eaecc30, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1655502127
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655502123}
+  m_Mesh: {fileID: 4300000, guid: 0109f0f01845af642af3618bcfe28673, type: 3}
+=======
+  m_GameObject: {fileID: 1657412979}
+  m_CullTransparentMesh: 0
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
   m_GameObject: {fileID: 1657412979}
   m_CullTransparentMesh: 0
@@ -103354,6 +103520,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7cdaffd26d338aa46bf8d1d9204958d6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e17f06330666ce46aed15cb3691c787, type: 3}
+<<<<<<< HEAD
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
+=======
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 --- !u!4 &1705960290 stripped
 Transform:
@@ -117461,6 +117630,7 @@ BoxCollider:
   m_Size: {x: 5.8144207, y: 2.5114324, z: 2.5977736}
   m_Center: {x: -0.000030409055, y: -0.5819156, z: -0.2571424}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!84 &2024329859
 RenderTexture:
   m_ObjectHideFlags: 0
@@ -117493,6 +117663,8 @@ RenderTexture:
     m_WrapW: 1
   m_Dimension: 2
   m_VolumeDepth: 1
+=======
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
 >>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 --- !u!1 &2024359162
@@ -117939,8 +118111,13 @@ Camera:
     height: 1
   near clip plane: 0.1
 <<<<<<< HEAD
+<<<<<<< HEAD
   far clip plane: 350
   field of view: 40
+=======
+  far clip plane: 2000
+  field of view: 55
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
   far clip plane: 2000
   field of view: 55
@@ -123124,8 +123301,13 @@ Transform:
   m_GameObject: {fileID: 2057092427}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 260.054, y: -1.5, z: 55.121}
   m_LocalScale: {x: 3.2130718, y: 1, z: 3.1985383}
+=======
+  m_LocalPosition: {x: 259.964, y: -1.5, z: 55.121}
+  m_LocalScale: {x: 3.2323503, y: 1, z: 3.1985383}
+>>>>>>> parent of 7c75ca6... Block up for Library to Dining Area done.
 =======
   m_LocalPosition: {x: 259.964, y: -1.5, z: 55.121}
   m_LocalScale: {x: 3.2323503, y: 1, z: 3.1985383}
